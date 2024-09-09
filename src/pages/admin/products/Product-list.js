@@ -7,7 +7,7 @@ export default function ProductList(){
 
     function getProducts() {
         // fetch("http://localhost:4000/products")
-        fetch("http://localhost:4000/products?_sort=id&_order=desc")
+        fetch("http://localhost:8000/products?_sort=id&_order=desc")
             .then(response => {
                 if (response.ok) {
                     // Return the parsed JSON data
@@ -62,8 +62,8 @@ export default function ProductList(){
                                     <td>{product.brand}</td>
                                     <td>{product.category}</td>
                                     <td>{product.price}</td>
-                                    <td><img src={"http://localhost:4000/images/" + product.imageFilename} width="100" height="50" alt="..." /></td>
-                                    <td>{product.createdAt.slice(0, 10)}</td>
+                                    <td><img src={"http://localhost:8000/images/" + product.imageFilename} width="100" height="50" alt="..." /></td>
+                                    <td>{product.createdAt?.slice(0, 10)}</td>
                                     <td style={{ width: "10px", whiteSpace: "nowrap" }}>
                                         <Link className="btn btn-primary btn-sm me-1" to={"/admin/products/edit/" + product.id}>Edit</Link>
                                         <button type="button" className="btn btn-danger btn-sm">Delete</button>
