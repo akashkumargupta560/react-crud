@@ -30,7 +30,7 @@ export function Navbar() {
                             </a>
                             <ul className="dropdown-menu">
                                 {/* <li onClick={()=>navigate("/admin/products")}><a class="dropdown-item">Products</a></li> */}
-                                <li onClick={()=>navigate("/admin/products")}><a className="dropdown-item" href="/admin/products">Products</a></li>
+                                <li onClick={()=>navigate("/admin/products")}><a className="dropdown-item" style={{cursor:'pointer'}}>Products</a></li>
                                 <li onClick={()=>navigate("/profile")}><a className="dropdown-item" href="#">Profile</a></li>
                                 <li><hr className="dropdown-divider"/></li>
                                 <li onClick={()=>navigate("/logout")}><a className="dropdown-item" href="#">Logout</a></li>
